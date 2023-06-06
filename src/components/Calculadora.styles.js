@@ -87,6 +87,11 @@ export const ButtonsContainer = styled.div`
         }
     }
 
+    input[type = "button"].selected {
+        background: #26c2ae;
+    }
+
+
     input#custom-tip{
         width:100%;
         background: #f3f9fa;

@@ -5,7 +5,7 @@ import {
     GorjetaTotalContainer
 } from "./Resultados.styles"
 
-export function Resultados(){
+export function Resultados({total, gorjeta, limpar}){
     return(
         <ResultadosContainer>
             <GorjetaTotalContainer>
@@ -14,7 +14,7 @@ export function Resultados(){
                         Gorjeta <br/>
                         <span>/ pessoa</span>
                     </p>
-                    <p>R$ 0.00</p>
+                    <p>R$ {gorjeta.toFixed(2)}</p>
                 </GorjetaContainer>
 
                 <TotalContainer>
@@ -22,10 +22,10 @@ export function Resultados(){
                         Total <br/>
                         <span>/ pessoa</span>
                     </p>
-                    <p>R$ 0.00</p>
+                    <p>R$ {total.toFixed(2)}</p>
                 </TotalContainer>
             </GorjetaTotalContainer>
-            <button>Limpar</button>
+            <button onClick={limpar}>Limpar</button>
 
         </ResultadosContainer>
     )
